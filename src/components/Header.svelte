@@ -1,10 +1,15 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import DynamicIcon from './DynamicIcon.svelte';
-	let path: string;
-	const nav = ['Home', 'About Me', 'Blog'].map((i) => i.toUpperCase());
-	const routes = ['home', 'about-me', 'blog'];
+	import DynamicIcon from './utils/DynamicIcon.svelte';
+	const nav: Array<{ path: string; name: string }> = [
+		{ path: '', name: 'Home' },
+		{ path: '#about', name: 'About' },
+		{ path: '#projects', name: 'Projects' },
+		{ path: '#contact', name: 'Contact' },
+		{ path: '#blog', name: 'Blog ***' }
+	];
 
+	let path;
 	$: {
 		path = $page.url.pathname.split('/')[1];
 	}
@@ -18,19 +23,26 @@
 					img(src="/images/logo.png" class="logo" alt="SimProch logo")
 				
 			div(class="flex routes")
-				+each('routes as route, index')
-					a(href="/{route}" class="route") 
+				+each('nav as route, index')
+					a(href="./{route.path}" class="route") 
 						+if('path === route')
-							span(class="route__active") {nav[index]}
+							span(class="route__active") {PerformanceResourceTiming.name}
 							+else()
-								span {nav[index]}
-
-			div(class="flex")
-				a(href="https://github.com/SimProch" class="text-sm font-semibold leading-6 text-gray-900" target="_blank")
-					DynamicIcon(name="github" type="large")
+								span {route.name}
 </template>
 
 <style lang="scss">
+	header {
+		position: sticky;
+		top: 0;
+		background-color: white;
+		z-index: 1;
+		height: 10vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0 32px 0 24px;
+	}
 	.flex {
 		display: flex;
 		flex-direction: row;

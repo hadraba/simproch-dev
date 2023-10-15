@@ -1,18 +1,23 @@
-<script>
-	import Footer from '../components/Footer.svelte';
+<script lang="ts">
 	import Header from '../components/Header.svelte';
+	import Home from '../components/Home.svelte';
+	import About from '../components/About.svelte';
+	import Projects from '../components/Projects.svelte';
+	import Footer from '../components/Footer.svelte';
 </script>
 
 <template lang="pug">
-	div(class="app")
-		Header
-		main
-			slot
-		Footer
+	div(class="site")
+        Header
+        main
+            Home
+            About
+            Projects
+        Footer
 </template>
 
 <style>
-	.app {
+	.site {
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
@@ -22,10 +27,6 @@
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 48rem;
-		margin: 0 auto;
 		box-sizing: border-box;
 	}
 </style>
