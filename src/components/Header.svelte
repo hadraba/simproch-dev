@@ -2,17 +2,23 @@
 	import { page } from '$app/stores';
 	import DynamicIcon from './utils/DynamicIcon.svelte';
 	const nav: Array<{ path: string; name: string }> = [
-		{ path: '', name: 'Home' },
-		{ path: '#about', name: 'About' },
-		{ path: '#projects', name: 'Projects' },
-		{ path: '#contact', name: 'Contact' },
-		{ path: '#blog', name: 'Blog ***' }
+		{ path: 'home', name: 'Home' },
+		{ path: 'about', name: 'About' },
+		{ path: 'experience', name: 'Experience' },
+		{ path: 'blog', name: 'Blog ***' }
 	];
 
-	let path;
-	$: {
-		path = $page.url.pathname.split('/')[1];
-	}
+	const scrollIntoView = (id: string) => {
+		if (id === 'home') {
+			scrollTo({ top: 0, behavior: 'smooth' });
+			return;
+		}
+		const el = document.querySelector(`#${id}`);
+		if (!el) return;
+		el.scrollIntoView({
+			behavior: 'smooth'
+		});
+	};
 </script>
 
 <template lang="pug">
@@ -24,11 +30,8 @@
 				
 			div(class="flex routes")
 				+each('nav as route, index')
-					a(href="./{route.path}" class="route") 
-						+if('path === route')
-							span(class="route__active") {PerformanceResourceTiming.name}
-							+else()
-								span {route.name}
+					a(class="route" on:click!="{() => scrollIntoView(route.path)}")
+						span {route.name}
 </template>
 
 <style lang="scss">

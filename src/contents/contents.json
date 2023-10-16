@@ -1,0 +1,92 @@
+{
+	"main": {
+		"title": "Hi, I'm Simon.",
+		"subtitle": "I'm a full stack developer who does shit for funks."
+	},
+	"about": {
+		"title": "About me",
+		"subtitle": "Here you can find additional stuff before I come up with better text",
+		"sections": {
+			"whoAmI": {
+				"title": "Who am I?",
+				"blocks": [
+					"I'm a programmer, mentor, information management & economics major, obstacle course racer, marathon runner, captain and boulderer.",
+					"I originate from the picturesque village of Sloup in Moravian Karst, Czechia, and I've been living in Brno since 2018.",
+					"I am passionate about all things JavaScript, test driven development.",
+					"I am also a blog writer that I write either to learn (Feynman technique) or remember interesting things I've encountered during my career/hobbies."
+				]
+			},
+			"skills": {
+				"title": "Skills",
+				"blocks": [
+					{
+						"type": "Web development",
+						"list": [
+							{ "name": "Angular", "linkTo": "https://angular.io/" },
+							{ "name": "CSS", "linkTo": "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+							{ "name": "Cypress", "linkTo": "https://www.cypress.io/" },
+							{
+								"name": ".NET Core",
+								"linkTo": "https://learn.microsoft.com/en-us/dotnet/core/introduction"
+							},
+							{ "name": "expressjs", "linkTo": "https://expressjs.com/" },
+							{ "name": "HTML", "linkTo": "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+							{ "name": "JavaScript", "linkTo": "https://www.ecma-international.org/" },
+							{ "name": "Jest", "linkTo": "https://jestjs.io/" },
+							{ "name": "Nest JS", "linkTo": "https://nestjs.com/" },
+							{ "name": "Node.JS", "linkTo": "https://nodejs.org/en" },
+							{ "name": "React", "linkTo": "https://react.dev/" },
+							{ "name": "react-native", "linkTo": "https://reactnative.dev/" },
+							{ "name": "RxJS", "linkTo": "https://rxjs.dev/" },
+							{ "name": "Sass", "linkTo": "https://sass-lang.com/" },
+							{ "name": "TypeScript", "linkTo": "https://www.typescriptlang.org/" }
+						]
+					},
+					{
+						"type": "Database",
+						"list": [
+							{ "name": "WebScale", "linkTo": "https://www.mongodb.com/" },
+							{ "name": "MS-SQL", "linkTo": "https://www.microsoft.com/en-us/sql-server" },
+							{ "name": "MySQL", "linkTo": "https://www.mysql.com/" },
+							{ "name": "Prisma", "linkTo": "https://www.prisma.io/" },
+							{ "name": "TypeORM", "linkTo": "https://typeorm.io/" }
+						]
+					},
+					{
+						"type": "Other",
+						"list": [
+							{ "name": "Atlassian tools", "linkTo": "https://www.atlassian.com/" },
+							{ "name": "AWS", "linkTo": "https://aws.amazon.com/" },
+							{ "name": "CircleCI", "linkTo": "https://circleci.com/" },
+							{ "name": "Cucumber", "linkTo": "https://cucumber.io/" },
+							{ "name": "Git", "linkTo": "https://git-scm.com/" },
+							{ "name": "GitHub", "linkTo": "https://github.com/" },
+							{ "name": "Microsoft Azure", "linkTo": "https://azure.microsoft.com/en-us" },
+							{ "name": "Miro", "linkTo": "https://miro.com/" },
+							{ "name": "Netlify", "linkTo": "https://www.netlify.com/" },
+							{ "name": "Notion", "linkTo": "https://www.notion.so/" }
+						]
+					}
+				]
+			}
+		}
+	},
+	"experience": [
+		{
+			"identifier": "level-works",
+			"companyName": "Level.works",
+			"content": "Level.works is a Rotterdam based company that connects flexible workers (freelancers) with companies. During my stay here, I've leveraged React, React Native, Some other shit and a bunch of other items that I need to write here"
+		},
+		{
+			"identifier": "logex-solution-centre",
+			"companyName": "LOGEX Solution Centre",
+			"content": "LOGEX is an Amsterdam based company that helps medical facilities get insight into their data. During my stay, I've been part of a company that has grown from 40 people across 2 countries to 300 people across 6 countries. I've been responsible for technical leadership of a product, as well as developing internal framework used by 60 developers, and I've helped the company with rebranding their product twice."
+		},
+		{
+			"identifier": "green-fox-academy",
+			"companyName": "Green Fox Academy",
+			"content": "Green Fox Academy is a hungarian company with a branch office in Czechia. When I was mentoring here, I was one of very few mentors whose students had 100 % success when finishing their final exams, as well as receiving their jobs within 2 weeks of finishing the bootcamp."
+		}
+	],
+	"footer": {}
+}
