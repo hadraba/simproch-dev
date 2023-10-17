@@ -6,31 +6,30 @@
 </script>
 
 <template lang="pug">
-    section(class="home" id="home")
-        div(class="home__title")
-            h1 { title }
-            h2 { subtitle }
-        div(class="home__mouse")
-            MouseIndicator
+	section(class="home flex-col flex-col--center" id="home")
+		div(class="wrapper base-width flex-col flex-col--center")
+			div(class="home__title flex-col flex-col--center")
+				h1 { title }
+				h2 { subtitle }
+			div(class="home__mouse")
+				MouseIndicator
 </template>
 
 <style lang="scss">
 	.home {
-		background-color: rgb(240, 240, 240);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		background-color: #fff;
 
-		.home__title {
-			margin-top: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
+		.wrapper {
+			flex-grow: 1;
 
-		.home__mouse {
-			margin-top: auto;
-			margin-bottom: 2rem;
+			.home__title {
+				margin-top: auto;
+			}
+
+			.home__mouse {
+				margin-top: auto;
+				margin-bottom: 2rem;
+			}
 		}
 	}
 </style>

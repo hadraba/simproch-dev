@@ -8,6 +8,7 @@
 		| 'expressjs'
 		| 'git'
 		| 'github'
+		| 'github-white'
 		| 'jest'
 		| 'jira'
 		| 'microsoft-azure'
@@ -19,13 +20,28 @@
 		| 'reactjs'
 		| 'sass'
 		| 'svelte'
-		| 'typescript';
+		| 'typescript'
+		| 'icon-close'
+		| 'icon-menu'
+		| 'icon-external-window'
+		| 'linkedin-white';
 
-	export let type: 'scaled' | 'large' | 'small' = 'small';
+	export let type: 'large' | 'small' | 'mini' = 'small';
 	export let name: AvailableIcons;
+	export let linkTo: string | undefined;
 </script>
 
-<img src={`/images/icons/${name}.svg`} class={type} alt={`${name} logo`} />
+{#if linkTo}
+	<a href={linkTo} target="_blank" class={type}>
+		<img
+			src={`/images/icons/${name.includes('.') ? name : `${name}.svg`}`}
+			class={type}
+			alt={`${name} logo`}
+		/>
+	</a>
+{:else}
+	<img src={`/images/icons/${name}.svg`} class={type} alt={`${name} logo`} />
+{/if}
 
 <style lang="scss">
 	.large {
@@ -38,7 +54,8 @@
 		height: 24px;
 	}
 
-	.scaled {
-		height: 60px;
+	.mini {
+		width: 16px;
+		height: 16px;
 	}
 </style>

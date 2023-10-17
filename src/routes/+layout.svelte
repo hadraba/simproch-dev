@@ -7,26 +7,19 @@
 </script>
 
 <template lang="pug">
-	div(class="site")
-        Header
-        main
-            Home
-            About
-            Experience
-        Footer
+	div(class="site flex-col")
+		Header
+		main(class="flex-col")
+			slot
+		Footer
 </template>
 
-<style>
+<style lang="scss">
 	.site {
-		display: flex;
-		flex-direction: column;
 		min-height: 100vh;
 	}
 
 	main {
 		flex: 1;
-		display: flex;
-		flex-direction: column;
-		box-sizing: border-box;
 	}
 </style>

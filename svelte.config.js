@@ -7,13 +7,7 @@ filePath.push('src');
 filePath = filePath.join('/');
 
 const config = {
-	preprocess: [
-		preprocess({
-			scss: {
-				prependData: `@import '${filePath}/global.scss';`
-			}
-		})
-	],
+	preprocess: preprocess(),
 	kit: {
 		adapter: adapter({
 			edge: false,

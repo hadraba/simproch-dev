@@ -1,19 +1,18 @@
 {
 	"main": {
-		"title": "Hi, I'm Simon.",
-		"subtitle": "I'm a full stack developer who does shit for funks."
+		"title": "Hi, I'm Simon",
+		"subtitle": "I crack business puzzles through software craftsmanship."
 	},
 	"about": {
 		"title": "About me",
-		"subtitle": "Here you can find additional stuff before I come up with better text",
 		"sections": {
 			"whoAmI": {
-				"title": "Who am I?",
+				"title": "Get to know me",
 				"blocks": [
-					"I'm a programmer, mentor, information management & economics major, obstacle course racer, marathon runner, captain and boulderer.",
-					"I originate from the picturesque village of Sloup in Moravian Karst, Czechia, and I've been living in Brno since 2018.",
-					"I am passionate about all things JavaScript, test driven development.",
-					"I am also a blog writer that I write either to learn (Feynman technique) or remember interesting things I've encountered during my career/hobbies."
+					"I'm a dynamic programmer with a dedication to mentoring, holding an academic background in information management and economics. Beyond my passion for technology and data, I thrive on personal challenges. Whether conquering obstacle courses, running marathons, navigating as a boat captain, or scaling demanding bouldering routes, I'm always seeking new heights.",
+					"My roots trace back to the idyllic village of Sloup nestled within the enchanting landscapes of Moravian Karst, Czechia. Since 2018, I've made Brno my home, immersing myself in the city life.",
+					"My heart belongs to the intricate realm of JavaScript, encompassing web and mobile development, along with a diverse array of development methodologies, including behavior-driven and test-driven approaches.",
+					"Discovering the resonance of the Feynman technique with my learning style ignited my journey as a blogger. Through my blog, I seek to absorb and preserve the fascinating knowledge and experiences I've encountered throughout my career and hobbies."
 				]
 			},
 			"skills": {
@@ -75,18 +74,21 @@
 		{
 			"identifier": "level-works",
 			"companyName": "Level.works",
-			"content": "Level.works is a Rotterdam based company that connects flexible workers (freelancers) with companies. During my stay here, I've leveraged React, React Native, Some other shit and a bunch of other items that I need to write here"
+			"content": "Level.works, a Dutch-based company, functions as a vital intermediary, connecting adept, flexible workers with enterprises offering opportunities in the blue-collar job sector. Their core mission revolves around establishing a seamless bridge between the diverse skills of their labor force and the specific demands of these businesses, nurturing a dynamic and harmonious employment ecosystem."
 		},
 		{
 			"identifier": "logex-solution-centre",
 			"companyName": "LOGEX Solution Centre",
-			"content": "LOGEX is an Amsterdam based company that helps medical facilities get insight into their data. During my stay, I've been part of a company that has grown from 40 people across 2 countries to 300 people across 6 countries. I've been responsible for technical leadership of a product, as well as developing internal framework used by 60 developers, and I've helped the company with rebranding their product twice."
+			"content": "LOGEX Healthcare Analytics is a Dutch company specializing in healthcare analytics and solutions. They provide software and services designed to help healthcare organizations and professionals make data-driven decisions to improve the quality and efficiency of healthcare delivery."
 		},
 		{
 			"identifier": "green-fox-academy",
 			"companyName": "Green Fox Academy",
-			"content": "Green Fox Academy is a hungarian company with a branch office in Czechia. When I was mentoring here, I was one of very few mentors whose students had 100 % success when finishing their final exams, as well as receiving their jobs within 2 weeks of finishing the bootcamp."
+			"content": "Green Fox Academy is a Hungarian-based coding bootcamp and tech education provider known for offering intensive coding courses in various programming languages, with an emphasis on practical skills and project-based learning. They provide job placement support and offer flexible learning options, including in-person, online, and part-time courses."
 		}
 	],
-	"footer": {}
+	"footer": {
+		"title": "Simon Prochazka",
+		"subtitle": "Cracking business puzzles through software craftsmanship."
+	}
 }

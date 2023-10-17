@@ -7,10 +7,9 @@
 
 <template lang="pug">
 	div(class="experience")
-		div(class="experience__img") 
-			img(src="/images/company-logos/{imagePath}.png"  alt="{title} logo")
-		div(class="experience__content")
-			h1(class="experience__content__title") {title}
+		div(class="experience__content flex-col flex-col--center")
+			div(class="experience__img") 
+				img(src="/images/company-logos/{imagePath}.png"  alt="{title} logo")
 			div(class="divider")
 			div(class="experience__content__description") {content}
 			div(class="experience__content__know-more")
@@ -21,28 +20,23 @@
 	.experience {
 		width: 100%;
 		height: 100%;
-		display: flex;
-		flex-direction: row;
 		justify-content: center;
+		align-items: center;
 		gap: 40px;
 
-		.experience__img {
-			align-self: center;
-			img {
-				max-width: 200px;
-			}
-		}
-
 		.experience__content {
-			display: flex;
-			flex-direction: column;
 
+			.experience__img {
+				img {
+					max-width: 200px;
+				}
+			}
 			.experience__content__description {
 				margin-top: 12px;
 			}
 
-			.experience__content__title {
-				margin-bottom: 4px;
+			.experience__content__know-more {
+				margin-top: 16px;
 			}
 		}
 	}

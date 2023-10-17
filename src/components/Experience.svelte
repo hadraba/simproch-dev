@@ -5,24 +5,25 @@
 </script>
 
 <template lang="pug">
-	section(id="experience")
-		div(class="wrapper")
+	section(id="experience" class="flex-col flex-col--center")
+		div(class="flex-col wrapper base-width")
 			+each('data as company')
-				Company(imagePath="{company.identifier}" title="{company.companyName}" content="{company.content}")
+				div(class="company-info")
+					Company(imagePath="{company.identifier}" title="{company.companyName}" content="{company.content}")
 </template>
 
 <style lang="scss">
 	section {
-		background-color: rgb(240, 240, 240);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		background-color: #fff;
+	}
+
+	.company-info {
+		&:not(:last-of-type) {
+			margin-bottom: 48px;
+		}
 	}
 
 	.wrapper {
-		display: flex;
-		flex-direction: column;
 		gap: 40px;
-		width: 50%;
 	}
 </style>

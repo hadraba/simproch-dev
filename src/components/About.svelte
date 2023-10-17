@@ -7,21 +7,18 @@
 </script>
 
 <template lang="pug">
-	section(class="flex-col" id="about")
-		div(class="wrapper")
-			div(class="flex-col")
+	section(class="flex-col flex-col--center" id="about")
+		div(class="base-width base-width--wider flex-col flex-col--center")
+			div(class="flex-col flex-col--center")
 				h1 { data.title } 
-				div(class="divider")
-				h2 { data.subtitle }
-			div(class="about")
+			div(class="flex-row about")
 				div(class="about__description")
 					h2 {whoAmI.title}
 					+each('whoAmI.blocks as block')
 						p {block}
 				div(class="about__skills")
-					h1 { skills.title}
 					+each('skills.blocks as block')
-						div
+						div(class="about__skills__block")
 							h2 {block.type}
 							+each('block.list as skill')
 								SkillButton(name="{skill.name}" linkTo="{skill.linkTo}")
@@ -29,23 +26,24 @@
 </template>
 
 <style lang="scss">
-	.wrapper {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 60%;
+	section {
+		background-color: rgb(240, 240, 240);
+	}
 
-		.about {
-			display: flex;
-			flex-direction: row;
-			gap: 3rem;
+	.about {
+		gap: 3rem;
 
-			.about__description {
-				flex: 1;
-			}
+		.about__description {
+			flex: 1;
+		}
 
-			.about__skills {
-				flex: 1;
+		.about__skills {
+			flex: 1;
+
+			.about__skills__block {
+				&:not(:first-of-type) {
+					margin-top: 24px;
+				}
 			}
 		}
 	}

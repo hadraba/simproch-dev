@@ -11,7 +11,8 @@
 	.button {
 		position: relative;
 		display: inline-block;
-		margin: 15px;
+		margin-top: 4px;
+		margin-right: 8px;
 		padding: 8px 16px;
 		text-align: center;
 		font-size: 16px;
