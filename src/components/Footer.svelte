@@ -22,7 +22,7 @@
 <style lang="scss">
 	footer {
 		background-color: #111;
-		height: 30vh;
+		min-height: 30vh;
 		color: white;
 		padding: 0 25%;
 		justify-content: center;
@@ -32,6 +32,7 @@
 		height: 20%;
 		justify-content: space-between;
 		width: 100%;
+		gap: 12px;
 
 		.about__me {
 			display: flex;
@@ -55,6 +56,10 @@
 
 			.about__socials__icons {
 				gap: 8px;
+
+				@media (max-width: 1080px) {
+					flex-direction: row;
+				}
 			}
 		}
 	}
