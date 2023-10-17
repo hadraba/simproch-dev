@@ -10,7 +10,8 @@
 <style lang="scss">
 	.button {
 		position: relative;
-		display: inline-block;
+		display: flex;
+		align-items: center;
 		margin-top: 4px;
 		margin-right: 8px;
 		padding: 8px 16px;

@@ -6,13 +6,19 @@
 
 <template lang="pug">
 	section(id="experience" class="flex-col flex-col--center")
+		div(class="flex-col flex-col--center")
+			h1 { data.title } 
 		div(class="flex-col wrapper base-width")
-			+each('data as company')
+			+each('data.blocks as company')
 				div(class="company-info")
 					Company(imagePath="{company.identifier}" title="{company.companyName}" content="{company.content}")
 </template>
 
 <style lang="scss">
+	h1 {
+		margin-bottom: 32px;
+	}
+
 	section {
 		background-color: #fff;
 	}

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import SkillButton from './SkillButton.svelte';
+	import KnowMoreButton from './KnowMoreButton.svelte';
 	export let imagePath: string;
 	export let title: string;
 	export let content: string;
@@ -13,7 +13,7 @@
 			div(class="divider")
 			div(class="experience__content__description") {content}
 			div(class="experience__content__know-more")
-				SkillButton(name="Know more" linkTo="/")
+				KnowMoreButton(name="Know more" linkTo="{imagePath}")
 </template>
 
 <style lang="scss">
@@ -25,7 +25,6 @@
 		gap: 40px;
 
 		.experience__content {
-
 			.experience__img {
 				img {
 					max-width: 200px;

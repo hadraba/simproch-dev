@@ -20,14 +20,19 @@
 					+each('skills.blocks as block')
 						div(class="about__skills__block")
 							h2 {block.type}
-							+each('block.list as skill')
-								SkillButton(name="{skill.name}" linkTo="{skill.linkTo}")
+							div(class="about__skills__block__list")
+								+each('block.list as skill')
+									SkillButton(name="{skill.name}" linkTo="{skill.linkTo}")
 
 </template>
 
 <style lang="scss">
 	section {
 		background-color: rgb(240, 240, 240);
+	}
+
+	h1 {
+		margin-bottom: 36px;
 	}
 
 	.about {
@@ -43,6 +48,12 @@
 			.about__skills__block {
 				&:not(:first-of-type) {
 					margin-top: 24px;
+				}
+
+				.about__skills__block__list {
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
 				}
 			}
 		}
