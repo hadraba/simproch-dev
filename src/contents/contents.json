@@ -210,7 +210,6 @@
 					{ "name": "Prisma", "linkTo": "https://www.prisma.io/" },
 					{ "name": "React", "linkTo": "https://react.dev/" },
 					{ "name": "react-native", "linkTo": "https://reactnative.dev/" },
-					{ "name": "TypeORM", "linkTo": "https://typeorm.io/" },
 					{ "name": "TypeScript", "linkTo": "https://www.typescriptlang.org/" },
 					{ "name": "WebScale", "linkTo": "https://www.mongodb.com/" }
 				]
