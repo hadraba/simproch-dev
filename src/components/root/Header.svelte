@@ -49,9 +49,15 @@
 			return;
 		}
 
-		const vh = window.innerHeight;
+		let top = item.getBoundingClientRect().top + window.scrollY;
+		if (window.innerWidth > 780) {
+			top -= header.offsetHeight;
+		}
 
-		window.scrollTo({ top: item.getBoundingClientRect().top + window.scrollY - header.offsetHeight, behavior: 'smooth' });
+		window.scrollTo({
+			top,
+			behavior: 'smooth'
+		});
 		window.history.replaceState({}, '', selector);
 	};
 
