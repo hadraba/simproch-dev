@@ -5,5 +5,5 @@
 	const data = Contents.LOGEX;
 </script>
 
-<TitleBlock {data} />
+<TitleBlock {data} id="experience" />
 <Detail data={data.detail} />

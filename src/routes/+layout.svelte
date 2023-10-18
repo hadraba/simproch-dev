@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Header from '../components/Header.svelte';
-	import Home from '../components/Home.svelte';
-	import About from '../components/About.svelte';
-	import Experience from '../components/Experience.svelte';
-	import Footer from '../components/Footer.svelte';
+	import Header from '../components/root/Header.svelte';
+	import Home from '../components/root/Home.svelte';
+	import About from '../components/root/About.svelte';
+	import Experience from '../components/root/Experience.svelte';
+	import Footer from '../components/root/Footer.svelte';
 </script>
 
 <template lang="pug">
@@ -15,36 +15,21 @@
 </template>
 
 <style lang="scss">
+	@import '../variables.scss';
+
 	.site {
 		min-height: 100vh;
-	}
-
-	:global(html) {
 		scroll-behavior: smooth;
 	}
 
 	:global(*) {
 		box-sizing: border-box;
-	}
-
-	:global(section) {
-		padding-bottom: 10vh;
-		padding-top: 10vh;
-		min-height: 100vh;
-	}
-
-	:global(h1) {
-		font-size: 3rem;
-	}
-
-	:global(h2) {
-		font-size: 2rem;
-		font-weight: 500;
+		font-family: $font-family;
+		line-height: 1.5;
 	}
 
 	:global(h1, h2, h3, h4, h5, h6, p) {
 		margin-block: 0;
-		line-height: 1.5;
 	}
 
 	:global(ul) {
@@ -54,9 +39,43 @@
 		padding-inline: 0;
 	}
 
+	:global(section) {
+		padding-bottom: 10vh;
+		padding-top: 10vh;
+		min-height: 100vh;
+	}
+
+	:global(h1) {
+		font-size: $heading-font-size;
+		font-family: $font-family;
+		line-height: $heading-line-height;
+		color: $heading-color;
+	}
+
+	:global(h2) {
+		font-size: $subheading-font-size;
+		font-weight: $subheading-font-weight;
+		font-family: $font-family;
+		line-height: $subheading-line-height;
+		color: $subheading-color;
+	}
+
 	:global(p) {
+		font-family: $font-family;
+		font-weight: $text-font-weight;
+		font-size: $text-font-size;
+		line-height: $text-line-height;
+		color: $text-color;
 		margin-top: 16px;
 		margin-bottom: 16px;
+	}
+
+	:global(h3) {
+		font-family: $font-family;
+		font-weight: $breadcrumbs-font-weight;
+		font-size: $breadcrumbs-font-size;
+		line-height: $breadcrumbs-line-height;
+		color: $breadcrumbs-color;
 	}
 
 	:global(.divider) {

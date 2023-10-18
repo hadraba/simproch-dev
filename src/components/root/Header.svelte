@@ -1,15 +1,18 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
-	import DynamicIcon from './utils/DynamicIcon.svelte';
+	import DynamicIcon from '../utils/DynamicIcon.svelte';
 	const nav: Array<{ path: string; name: string }> = [
 		{ path: 'home', name: 'Home' },
 		{ path: 'about', name: 'About' },
 		{ path: 'experience', name: 'Experience' },
-		{ path: 'footer', name: 'Contact' },
 		{ path: 'https://blog.simproch.dev/', name: 'Blog' }
 	];
 
 	let isMenuVisible = false;
+	let visibleElement = 'home';
+	let header: HTMLElement;
+	let lastHighlightedPart: string = 'home';
 
 	const toggleMenu = (event: PointerEvent | KeyboardEvent) => {
 		if (event instanceof KeyboardEvent) {
@@ -26,10 +29,55 @@
 		if (id.startsWith('https')) return id;
 		return `./#${id}`;
 	};
+
+	const scrollTo = (event: PointerEvent | KeyboardEvent, id: string) => {
+		event.preventDefault();
+		if (id.startsWith('http')) {
+			window.open(id, '_blank');
+			return false;
+		}
+		const selector = `#${id}`;
+		const item = document.querySelector(selector) as HTMLElement | null;
+
+		if (event instanceof KeyboardEvent && event.key === 'Enter') {
+			return;
+		}
+
+		isMenuVisible = !isMenuVisible;
+		if (!item) {
+			goto(`${$page.url.origin}/${selector}`);
+			return;
+		}
+
+		const vh = window.innerHeight;
+
+		window.scrollTo({ top: item.getBoundingClientRect().top + window.scrollY - header.offsetHeight, behavior: 'smooth' });
+		window.history.replaceState({}, '', selector);
+	};
+
+	const onScroll = (e: Event) => {
+		const html = (e.target as Document).children[0] as HTMLHtmlElement;
+		const parts = nav
+			.slice(0, -1)
+			.map((i) => document.querySelector(`#${i.path}`) as HTMLElement | null);
+		if (parts.includes(null)) {
+			visibleElement = nav[2].path;
+			return;
+		}
+		let highlightedPart = parts
+			.reverse()
+			.find((i) => i!.getBoundingClientRect().top + window.scrollY <= header.offsetTop);
+		if (highlightedPart == null) highlightedPart = parts[parts.length - 1];
+		visibleElement = highlightedPart!.id;
+		if (highlightedPart!.id !== lastHighlightedPart) {
+			lastHighlightedPart = highlightedPart!.id;
+			window.history.replaceState({}, '', `#${highlightedPart?.id}`);
+		}
+	};
 </script>
 
 <template lang="pug">
-	header(class="flex-col")
+	header(class="flex-col" bind:this="{header}")
 		div(class="header-bar")
 			div(class="header-bar__logo-wrapper")
 				a(href="/")
@@ -38,7 +86,7 @@
 			nav(class="header-bar__navigation")
 				div(class="header-bar__navigation__routes header-bar__navigation__routes--desktop")
 					+each('nav as route, index')
-						a(href="{getHref(route.path)}" target="{route.path.startsWith('https') ? '_blank' : ''}" class="header-bar__navigation__routes__route" tabindex="0")
+						a(href="{getHref(route.path)}" on:click!="{(e) => scrollTo(e, route.path)}" class="header-bar__navigation__routes__route" class:header-bar__navigation__routes__route--active="{route.path === visibleElement}" tabindex="0")
 							span {route.name}
 								+if('route.name === "Blog"')
 									DynamicIcon(name="icon-external-window" type="mini")
@@ -52,20 +100,24 @@
 						ul
 							+each('nav as route, index')
 								li
-									a(href="{getHref(route.path)}" target="{route.path.startsWith('https') ? '_blank' : ''}" tabindex="0" on:click!="{() => isMenuVisible = !isMenuVisible}")
+									a(href="{getHref(route.path)}" on:click!="{(e) => scrollTo(e, route.path)}" tabindex="0")
 										span {route.name}
 										+if('route.name === "Blog"')
 											DynamicIcon(name="icon-external-window" type="mini")
 </template>
 
+<svelte:window on:scroll={onScroll} />
+
 <style lang="scss">
+	@import '../../variables.scss';
+
 	header {
 		position: sticky;
 		top: 0;
 		background-color: white;
 		border-bottom: 1px solid rgb(240, 240, 240);
 		z-index: 1;
-		height: 10vh;
+		height: 5rem;
 		justify-content: center;
 		padding: 0 32px 0 24px;
 
@@ -102,7 +154,7 @@
 			.header-bar__navigation__routes {
 				display: flex;
 				flex-direction: row;
-				&--desktop {
+				&.header-bar__navigation__routes--desktop {
 					@media (max-width: 780px) {
 						display: none;
 					}
@@ -110,20 +162,28 @@
 					.header-bar__navigation__routes__route {
 						margin-left: 2rem;
 						text-decoration: none;
-						color: #000;
-						opacity: 0.45;
-						font-weight: 500;
-						line-height: 1.5;
-						font-size: 1.3rem;
+						color: $menu-color;
+						opacity: $menu-opacity;
+						font-weight: $menu-font-weight;
+						font-size: $menu-font-size;
 						display: flex;
 						flex-direction: row;
+						cursor: pointer;
+
+						&.header-bar__navigation__routes__route--active {
+							opacity: $menu-active-opacity;
+
+							&:hover {
+								opacity: $menu-active-hover-opacity;
+							}
+						}
 
 						span {
 							display: flex;
 						}
 
 						&:hover {
-							opacity: 0.65;
+							opacity: $menu-hover-opacity;
 						}
 
 						&:first-child {
@@ -132,7 +192,7 @@
 					}
 				}
 
-				&--mobile {
+				&.header-bar__navigation__routes--mobile {
 					display: none;
 
 					@media (max-width: 780px) {
@@ -142,21 +202,22 @@
 						.header-bar__navigation__routes__close {
 							display: none;
 							cursor: pointer;
+						}
 
-							&--visible {
-								display: flex !important;
-							}
+						.header-bar__navigation__routes__hamburger.header-bar__navigation__routes__hamburger--visible,
+						.header-bar__navigation__routes__close.header-bar__navigation__routes__close--visible {
+							display: flex;
 						}
 
 						.header-bar__navigation__routes__list {
 							position: absolute;
 							display: none;
-							top: 10vh;
+							top: 5rem;
 							left: 0;
 							width: 100vw;
 							background-color: #fff;
 
-							&--visible {
+							&.header-bar__navigation__routes__list--visible {
 								display: block;
 							}
 
@@ -179,7 +240,7 @@
 										color: #000;
 										opacity: 0.45;
 										padding: 8px 20px;
-										font-weight: 500;
+										font-weight: $menu-font-weight;
 										line-height: 1.5;
 										font-size: 1.3rem;
 										text-decoration: none;

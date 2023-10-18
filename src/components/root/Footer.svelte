@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Contents from '../contents/contents.json';
-	import DynamicIcon from './utils/DynamicIcon.svelte';
+	import Contents from '../../contents/contents.json';
+	import DynamicIcon from '../utils/DynamicIcon.svelte';
 	const data = Contents.footer;
 </script>
 
@@ -8,28 +8,35 @@
 	footer(class="flex-col flex-col--center" id="footer")
 		div(class="about flex-row")
 			div(class="about__me")
-				div(class="about__me__title") {data.title}
-				div(class="about__me__description") {data.subtitle}
+				span(class="about__me__title") {data.title}
+				span(class="about__me__description") {data.subtitle}
 			div(class="about__socials flex-col")
-				div(class="about__socials__title") Socials
+				span(class="about__socials__title") Socials
 				div(class="about__socials__icons flex-row")
 					DynamicIcon(name="github-white" linkTo="https://github.com/SimProch")
 					DynamicIcon(name="linkedin-white.ico" linkTo="https://www.linkedin.com/in/simon-prochazka-profile/")
 		div(class="footer-divider")
-		div(class="copyright") &copy; Copyright {new Date().getFullYear()}. Made by #[a(href="/" target="_blank") Simon Prochazka]. Logo by #[a(href="https://www.hadraba.com/" target="_blank") Adam Hadraba].
+		span(class="copyright") &copy; Copyright {new Date().getFullYear()}. Made by #[a(href="/" target="_blank") Simon Prochazka]. Logo by #[a(href="https://www.hadraba.com/" target="_blank") Adam Hadraba].
 </template>
 
 <style lang="scss">
 	footer {
 		background-color: #111;
-		min-height: 30vh;
+		height: 15rem;
 		color: white;
 		padding: 0 25%;
 		justify-content: center;
+
+		@media (max-height: 900px), (max-width: 780px) {
+			height: 25rem;
+		}
+
+		@media (max-height: 700px) {
+			// height: 30rem;
+		}
 	}
 
 	.about {
-		height: 20%;
 		justify-content: space-between;
 		width: 100%;
 		gap: 12px;
@@ -45,11 +52,12 @@
 
 			.about__me__description {
 				font-size: 1rem;
+				font-style: italic;
 			}
 		}
 
 		.about__socials {
-			font-size: 1.3rem;
+			font-size: 1.5rem;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;

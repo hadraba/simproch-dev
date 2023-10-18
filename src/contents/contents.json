@@ -9,10 +9,8 @@
 			"whoAmI": {
 				"title": "Get to know me",
 				"blocks": [
-					"I'm a dynamic programmer with a dedication to mentoring, holding an academic background in information management and economics. Beyond my passion for technology and data, I thrive on personal challenges. Whether conquering obstacle courses, running marathons, navigating as a boat captain, or scaling demanding bouldering routes, I'm always seeking new heights.",
-					"My roots trace back to the idyllic village of Sloup nestled within the enchanting landscapes of Moravian Karst, Czechia. Since 2018, I've made Brno my home, immersing myself in the city life.",
-					"My heart belongs to the intricate realm of JavaScript, encompassing web and mobile development, along with a diverse array of development methodologies, including behavior-driven and test-driven approaches.",
-					"Discovering the resonance of the Feynman technique with my learning style ignited my journey as a blogger. Through my blog, I seek to absorb and preserve the fascinating knowledge and experiences I've encountered throughout my career and hobbies."
+					"I'm an enthusiastic programmer with an academic background in information management and economics. Beyond my passion for technology and data, I enjoy personal challenges like obstacle courses, marathons, and bouldering. I come from the village of Sloup in Czechia and have called Brno home since 2018.",
+					"I specialize in JavaScript for web and mobile development, focusing on various development methodologies, including behavior-driven and test-driven approaches. The Feynman technique inspired me to start blogging about my career and hobbies, sharing my experiences and knowledge."
 				]
 			},
 			"skills": {
@@ -95,15 +93,16 @@
 		"subtitle": "Cracking business puzzles through software craftsmanship."
 	},
 	"GFA": {
+		"breadcrumbs": "Experience",
 		"title": "Green fox academy",
 		"subtitle": "A tale of a software bootcamp mentor",
 		"detail": {
 			"overview": {
 				"title": "Role description",
 				"textBlocks": [
-					"My journey with Green Fox Academy began in response to the constructive feedback I received from my previous employment. Acknowledging the room for improvement in my knowledge-sharing abilities, I proactively ventured into mentoring students to refine this skill.",
-					"During my year-long commitment to Green Fox Academy, I had the honor of imparting the nuances of software craftsmanship to a select group of seven students. Notably, I stood out among the mentors, achieving a remarkable feat: each of my students successfully completed the final exam and secured employment in the software development field within a mere two weeks of course completion.",
-					"Within the course curriculum, I seamlessly transitioned into various pivotal roles, including that of a product owner, scrum master, and tech lead. In these immersive sessions, I shared invaluable insights with the students, underscoring the fundamental principles of agile development and the pivotal role of feedback loops. Moreover, I orchestrated the development of a comprehensive project for the students, demanding they approach the task from both technical and business perspectives."
+					"My journey at Green Fox Academy began after receiving constructive feedback from my previous job. I recognized a need to enhance my knowledge-sharing abilities and proactively started mentoring students to improve.",
+					"During my year at Green Fox Academy, I taught software craftsmanship to seven students. I stood out among the mentors as all students passed the final exam and landed software development jobs within two weeks of completing the course.",
+					"In the program, I took on various roles, such as a product owner, scrum master, and tech lead. I shared insights on agile development and the importance of feedback loops in immersive sessions. I also guided students in developing a comprehensive project from technical and business perspectives."
 				]
 			},
 			"skills": {
@@ -132,17 +131,18 @@
 		}
 	},
 	"LOGEX": {
+		"breadcrumbs": "Experience",
 		"title": "LOGEX Solution Centre",
 		"subtitle": "From intern to tech lead, from startup to corporate",
 		"detail": {
 			"overview": {
 				"title": "Role description",
 				"textBlocks": [
-					"LOGEX has been the cornerstone of my career since my early college years, marking the inception of a transformative journey. Joining the company a mere year after its birth, my initial mission was nothing short of monumental—shaping the evolution of legacy AngularJS code into its modern successor.",
-					"In my first year, I embraced the role of a technical lead, entrusted with one of the company's lesser-known products. This experience proved invaluable, imparting profound lessons on the significance of adopting the Minimum Viable Product (MVP) approach and the fine art of crafting scalable code. This formative period propelled me through the ranks of software development at an impressive pace.",
-					"Subsequently, I embarked on a profound and transformative journey, deeply immersed in crafting a custom framework that stood as the bedrock for all our products. As a key member of the core development team during this era, I shouldered multifaceted responsibilities, tackling internationalization, navigating numerous rebranding initiatives, and pioneering test automation, all while donning the mantle of a product tech lead.",
-					"Beyond the realm of coding, my engagement extended to HR activities. I was instrumental in designing the entire interview process and played a pivotal role in the onboarding and mentoring of new developers entering the company's fold.",
-					"Over the course of my tenure, the company experienced a remarkable metamorphosis, expanding from a team of 40 to a workforce of 300 and extending its operations from one country to six. I was privileged to be an integral member of the core team that spearheaded and facilitated these profound changes, amassing invaluable insights and wisdom along the way."
+					"LOGEX has been central to my career since early college, launching a transformative journey. I joined just a year after its inception, tasked with modernizing legacy AngularJS code.",
+					"In my first year, I served as a technical lead for one of the company's products, learning the value of the Minimum Viable Product (MVP) approach and scalable code craftsmanship.",
+					"Next, I led the development of a foundational custom framework, taking on diverse responsibilities like internationalization, rebranding, and test automation, as well as keeping the mantle of product tech lead.",
+					"Beyond development, I was also active in HR department as I designed the interview process, as well as being responsible for onboarding and mentoring new developers",
+					"During my tenure, LOGEX expanded from 40 to 300 employees across six countries, and I was part of the core team driving these changes, gaining invaluable insights."
 				]
 			},
 			"skills": {
@@ -175,17 +175,17 @@
 		}
 	},
 	"LEVEL": {
+		"breadcrumbs": "Experience",
 		"title": "Level.works",
 		"subtitle": "Where development just works.",
 		"detail": {
 			"overview": {
 				"title": "Role description",
 				"textBlocks": [
-					"My latest endeavor posed a unique challenge. I joined Level.works just six months after its inception in the Czech Republic. The decision to leave my previous company stemmed from the belief that there was little left for me to learn there. Remarkably, my previous employer had such trust in my abilities that he approached me with an opportunity at a company established by one of his acquaintances.",
-					"Upon my entry into the company, the architectural aspect was not given significant attention. This was primarily due to the pressing need to swiftly deliver a multitude of features in their Minimum Viable Product (MVP) state, with the primary goal of generating revenue.",
-					"I played a pivotal role in addressing these challenges. My contributions encompassed a comprehensive overhaul, including the rebranding and architectural enhancements of the frontend. I spearheaded the transformation of the backend, shifting it closer to a domain-driven design paradigm. Additionally, I took charge of mobile app development, ensuring a holistic approach to improving the company's technical landscape.",
-					"Beyond my coding responsibilities, I took the initiative to create a structured onboarding program tailored for both interns and developers. Moreover, I actively engaged in representing the company at public events, contributing to its promotion and outreach efforts.",
-					"At Level, I experienced a profound moment of recognition, perhaps the most significant in my life thus far. A departing colleague paid me the highest compliment, stating: \"Of all the developers I've worked with, Šimon definitely has the deepest knowledge of JavaScript\""
+					"I became part of Level.works just six months after its inception in the Czech Republic, thanks to a recommendation from my previous employer, who recognized my potential.",
+					"Upon joining, I noticed a strong emphasis on rapidly delivering features for their Minimum Viable Product (MVP) to drive revenue, with less attention to architectural considerations.",
+					"I assumed a key role in revitalizing the frontend, steering the backend toward a domain-driven design approach, and actively contributing to mobile app development. In addition to that, I implemented a structured onboarding program and served as the face of the company at public events.",
+					"At Level, a departing colleague paid me the highest compliment, saying, 'Among all the developers I've worked with, Šimon undoubtedly possesses the deepest JavaScript knowledge."
 				]
 			},
 			"skills": {
@@ -201,7 +201,10 @@
 					{ "name": "GitHub", "linkTo": "https://github.com/" },
 					{ "name": "JavaScript", "linkTo": "https://www.ecma-international.org/" },
 					{ "name": "Jest", "linkTo": "https://jestjs.io/" },
-					{ "name": "Maestro", "linkTo": "https://maestro.mobile.dev/platform-support/react-native/" },
+					{
+						"name": "Maestro",
+						"linkTo": "https://maestro.mobile.dev/platform-support/react-native/"
+					},
 					{ "name": "Miro", "linkTo": "https://miro.com/" },
 					{ "name": "MySQL", "linkTo": "https://www.mysql.com/" },
 					{ "name": "Nest JS", "linkTo": "https://nestjs.com/" },

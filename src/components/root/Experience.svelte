@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Company from './utils/Company.svelte';
-	import Contents from '../contents/contents.json';
+	import Company from '../utils/Company.svelte';
+	import Contents from '../../contents/contents.json';
 	const data = Contents.experience;
 </script>
 

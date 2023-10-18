@@ -1,9 +1,7 @@
 <script lang="ts">
-	import Header from '../components/Header.svelte';
-	import Home from '../components/Home.svelte';
-	import About from '../components/About.svelte';
-	import Experience from '../components/Experience.svelte';
-	import Footer from '../components/Footer.svelte';
+	import Home from '../components/root/Home.svelte';
+	import About from '../components/root/About.svelte';
+	import Experience from '../components/root/Experience.svelte';
 </script>
 
 <template lang="pug">

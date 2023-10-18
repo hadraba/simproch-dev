@@ -8,6 +8,8 @@
 </template>
 
 <style lang="scss">
+	@import '../../variables.scss';
+
 	.button {
 		position: relative;
 		display: flex;
@@ -16,12 +18,11 @@
 		margin-right: 8px;
 		padding: 8px 16px;
 		text-align: center;
-		font-size: 16px;
 		letter-spacing: 1px;
 		text-decoration: none;
-		color: #999999;
-		background: #ffffff;
-		border: 2px solid #999999;
+		color: $button-color;
+		background: $button-background;
+		border: $button-border-size solid $button-color;
 		cursor: pointer;
 		transition: ease-out 0.5s;
 		-webkit-transition: ease-out 0.5s;
@@ -37,27 +38,27 @@
 		}
 
 		&::after {
-			top: -2px;
-			left: -2px;
-			border-top: 2px solid transparent;
-			border-left: 2px solid transparent;
+			top: -$button-border-size;
+			left: -$button-border-size;
+			border-top: $button-border-size solid transparent;
+			border-left: $button-border-size solid transparent;
 		}
 
 		&::before {
-			bottom: -2px;
-			right: -2px;
-			border-bottom: 2px solid transparent;
-			border-right: 2px solid transparent;
+			bottom: -$button-border-size;
+			right: -$button-border-size;
+			border-bottom: $button-border-size solid transparent;
+			border-right: $button-border-size solid transparent;
 		}
 
 		&:hover {
-			color: #222;
+			color: $button-hover-color;
 
 			&::after,
 			&::before {
-				width: calc(50% + 2px);
-				height: calc(50% + 2px);
-				border-color: #222;
+				width: calc(50% + $button-border-size);
+				height: calc(50% + $button-border-size);
+				border-color: $button-hover-color;
 			}
 		}
 	}

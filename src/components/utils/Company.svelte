@@ -11,7 +11,7 @@
 			div(class="experience__img") 
 				img(src="/images/company-logos/{imagePath}.png"  alt="{title} logo")
 			div(class="divider")
-			div(class="experience__content__description") {content}
+			p(class="experience__content__description") {content}
 			div(class="experience__content__know-more")
 				KnowMoreButton(name="Know more" linkTo="{imagePath}")
 </template>
@@ -29,9 +29,6 @@
 				img {
 					max-width: 200px;
 				}
-			}
-			.experience__content__description {
-				margin-top: 12px;
 			}
 
 			.experience__content__know-more {

@@ -9,7 +9,6 @@
 		height: 45px;
 		border: 2px solid black;
 		border-radius: 15px;
-		cursor: pointer;
 		position: relative;
 		text-align: center;
 

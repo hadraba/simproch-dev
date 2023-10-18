@@ -1,6 +1,6 @@
 <script lang="ts">
-	import SkillButton from './utils/SkillButton.svelte';
-	import Contents from '../contents/contents.json';
+	import SkillButton from '../utils/SkillButton.svelte';
+	import Contents from '../../contents/contents.json';
 	const data = Contents.about;
 
 	const { whoAmI, skills } = data.sections;

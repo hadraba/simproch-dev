@@ -5,5 +5,5 @@
 	const data = Contents.GFA;
 </script>
 
-<TitleBlock {data} />
-<Detail data={data.detail} />
+<TitleBlock {data} id="experience" />
+<Detail data={data.detail}/>

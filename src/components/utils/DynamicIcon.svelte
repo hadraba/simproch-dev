@@ -58,4 +58,11 @@
 		width: 16px;
 		height: 16px;
 	}
+
+	img {
+		opacity: 0.5;
+		&:hover {
+		opacity: 1;
+		}
+	}
 </style>

@@ -5,5 +5,5 @@
 	const data = Contents.LEVEL;
 </script>
 
-<TitleBlock {data} />
+<TitleBlock {data} id="experience" />
 <Detail data={data.detail} />

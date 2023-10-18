@@ -48,11 +48,10 @@
 		font-weight: 400;
 		line-height: 1;
 		margin: 20px;
-		padding: 1.2em 2.8em;
+		padding: 1em 2em;
 		text-decoration: none;
 		text-align: center;
 		text-transform: uppercase;
-		font-family: 'Montserrat', sans-serif;
 		font-weight: 700;
 		transition: box-shadow 300ms ease-out, color 300ms ease-out;
 
