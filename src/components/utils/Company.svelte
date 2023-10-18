@@ -10,9 +10,9 @@
 		div(class="experience__content flex-col flex-col--center")
 			div(class="experience__img") 
 				img(src="/images/company-logos/{imagePath}.png"  alt="{title} logo")
-			div(class="divider")
-			p(class="experience__content__description") {content}
-			div(class="experience__content__know-more")
+			div()
+				p(class="experience__content__description") {content}
+				div(class="experience__content__know-more")
 				KnowMoreButton(name="Know more" linkTo="{imagePath}")
 </template>
 
@@ -22,11 +22,17 @@
 		height: 100%;
 		justify-content: center;
 		align-items: center;
-		gap: 40px;
 
 		.experience__content {
+			display: flex;
+			align-items: flex-start;
+    		flex-direction: row;
+			gap: 3rem;
+			align-items: center;
+
 			.experience__img {
 				img {
+					margin-top: -52.8px;
 					max-width: 200px;
 				}
 			}

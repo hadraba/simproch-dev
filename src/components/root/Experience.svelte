@@ -6,8 +6,8 @@
 
 <template lang="pug">
 	section(id="experience" class="flex-col flex-col--center")
-		div(class="flex-col flex-col--center")
-			h1 { data.title } 
+		div(class="flex-col base-width")
+			h2 { data.title } 
 		div(class="flex-col wrapper base-width")
 			+each('data.blocks as company')
 				div(class="company-info")
@@ -15,17 +15,19 @@
 </template>
 
 <style lang="scss">
-	h1 {
+	h2 {
+		text-align: left;
 		margin-bottom: 32px;
 	}
 
-	section {
-		background-color: #fff;
+	.title {
+		width: 100%;
 	}
+
 
 	.company-info {
 		&:not(:last-of-type) {
-			margin-bottom: 48px;
+			margin-bottom: 36px;
 		}
 	}
 

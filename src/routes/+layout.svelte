@@ -42,7 +42,6 @@
 	:global(section) {
 		padding-bottom: 10vh;
 		padding-top: 10vh;
-		min-height: 100vh;
 	}
 
 	:global(h1) {
@@ -58,6 +57,16 @@
 		font-family: $font-family;
 		line-height: $subheading-line-height;
 		color: $subheading-color;
+		padding-top: 1rem;
+	}
+
+	:global(h3) {
+		font-size: $sub-subheading-font-size;
+		font-weight: $sub-subheading-font-weight;
+		font-family: $font-family;
+		line-height: $sub-subheading-line-height;
+		color: $sub-subheading-color;
+		padding-top: 1rem;
 	}
 
 	:global(p) {
@@ -68,14 +77,6 @@
 		color: $text-color;
 		margin-top: 16px;
 		margin-bottom: 16px;
-	}
-
-	:global(h3) {
-		font-family: $font-family;
-		font-weight: $breadcrumbs-font-weight;
-		font-size: $breadcrumbs-font-size;
-		line-height: $breadcrumbs-line-height;
-		color: $breadcrumbs-color;
 	}
 
 	:global(.divider) {

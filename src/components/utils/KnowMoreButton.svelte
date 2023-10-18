@@ -34,35 +34,59 @@
 </template>
 
 <style lang="scss">
-	button {
-		box-sizing: border-box;
-		appearance: none;
-		background-color: transparent;
-		border: 2px solid #bbb;
-		border-radius: 0.6em;
-		color: #bbb;
-		cursor: pointer;
-		display: flex;
-		align-self: center;
-		font-size: 1rem;
-		font-weight: 400;
-		line-height: 1;
-		margin: 20px;
-		padding: 1em 2em;
-		text-decoration: none;
-		text-align: center;
-		text-transform: uppercase;
-		font-weight: 700;
-		transition: box-shadow 300ms ease-out, color 300ms ease-out;
+	@import '../../variables.scss';
 
-		&:hover,
-		&:focus {
-			color: #222;
-			outline: 0;
+	button {
+		position: relative;
+		display: flex;
+		align-items: center;
+		margin-top: 4px;
+		margin-right: 4px;
+		padding: 8px 16px;
+		text-align: center;
+		font-size: 1.2rem;
+		letter-spacing: 1px;
+		text-decoration: none;
+		color: rgba(255,255,255,1);
+		background: rgba(0,0,0,1);
+		border: 4px solid rgba(0,0,0,1);
+		cursor: pointer;
+		transition: ease-out 0.5s;
+		-webkit-transition: ease-out 0.5s;
+		-moz-transition: ease-out 0.5s;
+
+		&::after,
+		&::before {
+			position: absolute;
+			content: '';
+			width: 0;
+			height: 0;
+			transition: 0.5s;
+		}
+
+		&::after {
+			top: -$button-border-size;
+			left: -$button-border-size;
+			border-top: $button-border-size solid transparent;
+			border-left: $button-border-size solid transparent;
+		}
+
+		&::before {
+			bottom: -$button-border-size;
+			right: -$button-border-size;
+			border-bottom: $button-border-size solid transparent;
+			border-right: $button-border-size solid transparent;
 		}
 
 		&:hover {
-			box-shadow: 0 0 40px 40px #bbb inset;
+			color: rgba(255,255,255,1);
+
+			&::after,
+			&::before {
+				width: calc(100% + $button-border-size);
+				height: calc(100% + $button-border-size);
+				border-color: rgba(255,255,255,1);
+			}
 		}
 	}
 </style>

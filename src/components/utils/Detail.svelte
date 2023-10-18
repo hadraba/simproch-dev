@@ -30,7 +30,7 @@
                         p {textBlock}
 
             div(class="flex-col skills")
-                h2 {data.skills.title}
+                h3 {data.skills.title}
                 div(class="skill__list")
                     +each('data.skills.skills as skill')
                         SkillButton(name="{skill.name}" linkTo="{skill.linkTo}")
@@ -49,12 +49,16 @@
 		margin-bottom: 12px;
 	}
 
+	h3 { 
+		padding-bottom: 8px;
+	}
+
 	.overview__text {
 		margin-bottom: 20px;
 	}
 
 	.skills {
-		margin-bottom: 24px;
+		margin-bottom: 80px;
 		.skill__list {
 			display: flex;
 			flex-direction: row;

@@ -12,12 +12,21 @@
 				+if('data.breadcrumbs')
 					h3 { data.breadcrumbs }
 				h1 { data.title }
-				h2 { data.subtitle }
+				p { data.subtitle }
 			div(class="home__mouse")
 				MouseIndicator
 </template>
 
 <style lang="scss">
+	p {
+		font-size: 2rem;
+		line-height: 1.2;
+	}
+
+	h3 {
+		opacity: .5;
+		margin-bottom: 10px;
+	}
 	.home {
 		background-color: #fff;
 		min-height: 50vh;

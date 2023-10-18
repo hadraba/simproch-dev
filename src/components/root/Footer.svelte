@@ -11,7 +11,7 @@
 				span(class="about__me__title") {data.title}
 				span(class="about__me__description") {data.subtitle}
 			div(class="about__socials flex-col")
-				span(class="about__socials__title") Socials
+				span(class="about__socials__title") Let's connect through #[a(href="simon.je.teplomrd@prc.com" target="_blank") e-mail] or social media:
 				div(class="about__socials__icons flex-row")
 					DynamicIcon(name="github-white" linkTo="https://github.com/SimProch")
 					DynamicIcon(name="linkedin-white.ico" linkTo="https://www.linkedin.com/in/simon-prochazka-profile/")
@@ -22,24 +22,20 @@
 <style lang="scss">
 	footer {
 		background-color: #111;
-		height: 15rem;
 		color: white;
-		padding: 0 25%;
+		padding: 60px 60px 20px 60px;
 		justify-content: center;
-
-		@media (max-height: 900px), (max-width: 780px) {
-			height: 25rem;
-		}
-
-		@media (max-height: 700px) {
-			// height: 30rem;
-		}
 	}
 
 	.about {
 		justify-content: space-between;
 		width: 100%;
 		gap: 12px;
+
+		@media (max-width: 1120px) {
+			flex-direction: column;
+			gap: 60px;
+		}
 
 		.about__me {
 			display: flex;
@@ -51,9 +47,10 @@
 			}
 
 			.about__me__description {
-				font-size: 1rem;
-				font-style: italic;
+				font-size: 1.1rem;
+				color: rgba(255,255,255,.6);
 			}
+
 		}
 
 		.about__socials {
@@ -61,22 +58,30 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
+			align-items: flex-end;
 
 			.about__socials__icons {
-				gap: 8px;
-
-				@media (max-width: 1080px) {
-					flex-direction: row;
-				}
+				padding-top: 10px;
+				gap: 20px;
 			}
+
+			@media (max-width: 1120px) {
+				align-items: flex-start;
+			}
+		}
+	}
+
+	a {
+		color: #fff;
+		&:hover {
+			text-decoration: none;
 		}
 	}
 
 	.footer-divider {
 		width: 100%;
 		height: 4px;
-		background-color: #eee;
-		margin: 1rem 0;
+		margin-top: 6rem;
 	}
 
 	.copyright {

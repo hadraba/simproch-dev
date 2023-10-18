@@ -117,7 +117,7 @@ const options = {
 				background: var(--bg);
 				color: var(--fg);
 				font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-					Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+					Ubuntu, Cantarell, 'Inter Tight', 'Helvetica Neue', sans-serif;
 				display: flex;
 				align-items: center;
 				justify-content: center;

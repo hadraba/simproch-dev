@@ -8,18 +8,17 @@
 
 <template lang="pug">
 	section(class="flex-col flex-col--center" id="about")
-		div(class="base-width base-width--wider flex-col flex-col--center")
-			div(class="flex-col flex-col--center")
-				h1 { data.title } 
+		div(class="base-width base-width--wider flex-col")
+			div(class="flex-col")
+				h2 { data.title } 
 			div(class="flex-row about")
 				div(class="about__description")
-					h2 {whoAmI.title}
 					+each('whoAmI.blocks as block')
 						p {block}
 				div(class="about__skills")
 					+each('skills.blocks as block')
 						div(class="about__skills__block")
-							h2 {block.type}
+							h3 {block.type}
 							div(class="about__skills__block__list")
 								+each('block.list as skill')
 									SkillButton(name="{skill.name}" linkTo="{skill.linkTo}")
@@ -33,6 +32,14 @@
 
 	h1 {
 		margin-bottom: 36px;
+	}
+	
+	h2 {
+		margin-bottom: 36px;
+	}
+
+	h3 {
+		margin-bottom: 8px;
 	}
 
 	.about {

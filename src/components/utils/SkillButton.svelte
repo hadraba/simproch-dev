@@ -15,14 +15,14 @@
 		display: flex;
 		align-items: center;
 		margin-top: 4px;
-		margin-right: 8px;
+		margin-right: 4px;
 		padding: 8px 16px;
 		text-align: center;
 		letter-spacing: 1px;
 		text-decoration: none;
 		color: $button-color;
 		background: $button-background;
-		border: $button-border-size solid $button-color;
+		border: $button-border-size solid $button-background;
 		cursor: pointer;
 		transition: ease-out 0.5s;
 		-webkit-transition: ease-out 0.5s;
@@ -56,8 +56,8 @@
 
 			&::after,
 			&::before {
-				width: calc(50% + $button-border-size);
-				height: calc(50% + $button-border-size);
+				width: calc(100% + $button-border-size);
+				height: calc(100% + $button-border-size);
 				border-color: $button-hover-color;
 			}
 		}
